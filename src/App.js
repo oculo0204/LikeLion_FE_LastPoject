@@ -1,9 +1,14 @@
-
+import Main from "./components/main/Main.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import './assets/scss/styles.scss';
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<Main/>} />
+            </Routes>
+        </BrowserRouter>
   );
 }
 
