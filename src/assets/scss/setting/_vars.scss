@@ -1,9 +1,7 @@
 
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
-
 :root {
-    --mainfont: "pretendard";
-
+    --mainfont:'Noto-Sans';
+    --placeholder:#6e6e6e;
     // 메인 컬러 
     --purple100: #5b5ee3;
     --purple200: #8b66de;
@@ -14,6 +12,7 @@
     --black200: #868686;
     --black300: #E2E8F0;
     --black400: #969AA3;
+    --black500: #dadfe9;
 
     // 하얀색
     --white: #fff;
@@ -23,12 +22,12 @@
     // 투명
     --none: #00000000;
     --red: #DD0000;
+    
+    //배경색
+    --bkcolor:rgb(236, 249, 255);
 
     // 폰트 세팅
-    font-family: var(--mainfont);
-    font-size: 16px;
-    line-height: 1.5;
-    font-weight: 400;
+    font-family: var(--mainfont) ;
 
     // 폰트 최적화
     font-synthesis: none;

@@ -1,0 +1,204 @@
+.nav-wrap{
+    width: 100%;
+    max-width: 1060px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+      }
+      
+      .popup-content {
+        position: absolute;
+        top:20px;
+        left:50%;
+        transform:translate(-50%);
+        background: white;
+        border-radius: 8px;        
+        width: 70%;
+        max-width: 1060px;
+        box-sizing: content-box;
+        padding: 50px 60px 0 60px;
+        height: 60%;
+      }
+      
+      
+      .close-btn {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+      }
+      .popup-header {
+        
+        margin-bottom: 20px;
+        .menu-options{
+            display: flex;
+            .gana{
+                display: flex;;
+            }
+            img{
+                width: 17px;
+                height: 17px;
+            }
+            .img-wrap{
+                width: 17px;
+                height: 17px;
+                position: relative;
+                overflow: hidden;
+            }
+            .gana-img{
+                width: 17px;
+                height: 34px;
+                position: absolute;
+                top:0;
+                left: 0;
+            }
+            .on{
+                width: 17px;
+                height: 34px;
+                position: absolute;
+                bottom:0;
+                left: 0;
+            }
+        }
+
+    }
+      .popup-body{
+        display: flex;
+        .popup-bold{
+            font-family: 'Noto-Sans-medium';
+            font-size: 18px;
+            width: 235px;
+            height: 37px;
+            margin-bottom: 5px;
+        }
+        .sorting-menu{
+            display: flex;
+            width: 100%;
+            height: 300px;
+            
+            .menu-section{
+                width: 25%;
+                .text-list{
+                    .popup-text{
+                        display: block;
+                        font-family: 15px;
+                    }
+                }
+            }
+        }
+      }
+      .footer-sections{
+        display: flex;
+        .footer-section{
+            .tomypage{
+                display: flex;
+                img{
+                    width: 9px;
+                    height: 9px;
+                    margin-left: 15px;
+                }
+            }
+
+        }
+    }
+      
+    
+      
+      
+      
+      
+      
+    .list{
+        height: 60px;
+        background-color: var(--white);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .text{
+            font-family: 'Noto-Sans-medium';
+            display: inline-block;
+            font-size: 19px;
+            box-sizing: content-box;
+            padding: 0 30px;
+            text-align: center;
+                text-align: center;
+            img{
+                width: 21px;
+                height: 21px;
+            }
+        }
+
+    }
+
+    .site-map-btn{//a
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        padding: 22.5px 18px;
+        span{
+            display:block;
+            width: 24px;
+            height: 2px;
+            background-color: var(--black);
+            margin-bottom: 5px;
+        }
+    }
+    .sign-wrp{
+        display: flex;
+        width: 300px;
+        p{
+            height: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 2px;
+        }
+        .signup{
+            
+            background: linear-gradient(to bottom right, var(--purple100),var(--purple200));
+            font-size: 15px;
+            color: var(--white);
+            height: 40px;
+            padding: 0 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 40px;
+            border: 1px solid #e6e6e6;
+            img{
+                width: 20px;
+                height: 20px;
+            }
+
+        }
+        .signin{
+            background-color: var(--white);
+            margin-left: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            padding: 0 15px;
+            font-size: 15px;
+            border-radius: 40px;
+            border: 1px solid #e6e6e6;
+            box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.12);
+            img{
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;;
+            }
+        }
+    }
+
+}

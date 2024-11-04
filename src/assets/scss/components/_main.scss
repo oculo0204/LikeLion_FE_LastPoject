@@ -1,3 +1,214 @@
 .main-wrap{
+    background-color: var(--white);
+    margin: 0 auto;
+    @media (max-width: 1100px) {
+        .header-wrap{
+            .keywords{
+            .last{
+                display: none;
+            }}
+
+        }
+        .nav-wrap{
+        .list{
+            justify-content: left;
+            .text {
+                font-size: 17px;
+                padding: 0 15px;
+            }
+        }
+    }
+    }
+    @media (max-width: 1000px) {
+        .header-wrap{
+            .keywords{
+            .sec{
+                display: none;
+            }     }
+            .ser-wrap{
+                position: absolute;
+                top: 25px;
+                right:50px;
+            }
+       }
+       .nav-wrap{
+        position: relative;
+        .list{
+            .text {
+                font-size: 13px;
+                
+            }
+
+        }
+        .sign-wrp{
+            position: absolute;
+            top:15px;
+            right: 0px;
+            height: 32px;;
+            justify-content: right;
+            .signup{
+
+                font-size: 13px;
+                height: 32px;
+                width: 105px;
+            }
+            .signin{
+                font-size: 13px;
+                height: 32px;
+            }
+          
+        }
+    }
+    }
+    @media (max-width: 900px) {
+        .header-wrap{
+            padding: 0 10px;
+            padding-top: 40px;
+            height: 150px;
+            .logo-wrap{
+                margin-left: 20px;
+                .logo-demo{
+                    width: 80px;
+                    height: 45px;
+                }
+            }
+            .center{
+                width: 98%;
+                height: 100%;
+                padding: 0;
+                .input-srch{
+                    height: 38px;
+                }
+            }
+            flex-direction: column;
+            .keywords{
+            .sec{
+                display: block;
+            } 
+            .last{
+                display: block;
+            }   
+            .thou{
+                display: block;
+            } 
+        }
+        .ser-wrap{
+            position: absolute;
+            top: 25px;
+            right:50px;
+        }
+       }
+       .nav-wrap{
+        .list{
+            .text {
+                font-size: 13px;
+                
+            }
+        }
+
+    }
+    }
+    @media (max-width: 800px) {
+        .header-wrap{
+            padding: 0 10px;
+            padding-top: 40px;
+            height: 150px;
+            .logo-wrap{
+                margin-left: 20px;
+                .logo-demo{
+                    width: 80px;
+                    height: 45px;
+                }
+            }
+            .center{
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                .input-srch{
+                    height: 38px;
+                }
+            }
+            flex-direction: column;
+            .keywords{
+            .sec{
+                display: block;
+            } 
+            .last{
+                display: block;
+            }    
+        }
+        .ser-wrap{
+            position: absolute;
+            top: 25px;
+            right:15%;
+        }
+       }
+       .nav-wrap{
+        .sign-wrp{
+            position: absolute;
+            top:15px;
+            right: 10px;
+            height: 32px;
+            width: 70px;
+            .signin{
+                width: 34px;
+                height: 32px;
+            }
+            .signup{
+                width: 34px;
+                height: 32px;
+            }
+            p{
+                display: none;
+            }
+        }
+
+    }
+    }
+}
+
+.visual-banner-wrap{
+    background-color: var( --bkcolor);
+    .slide-wrap{
+        position: relative;
+        width: 100%;
+        .slide-content{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            button{
+                img{
+                    width: 100vh;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+        }
+        .swiper-scrollbar {
+            background: var(--black400); /* 스크롤바 배경색 */
+            height: 5px; /* 스크롤바 높이 */
+            position: absolute;
+            bottom: 105px;
+            left: 195px;
+            width: 150px;
+            opacity: 1 !important;
+            .swiper-scrollbar-drag {
+                height: 5px;
+                width: 30px !important;
+                background: var(--black); /* 드래그 부분의 배경색 */
+                border-radius: 5px; /* 드래그 부분의 경계선 반경 */
+                opacity: 0.7; /* 드래그 부분의 투명도 */
+              }
+          }
+          .swiper-pagination{
+            position: absolute;
+            bottom:100px;
+            left: -500px;
+          }
+
+    }
     
 }
