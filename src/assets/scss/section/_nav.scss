@@ -9,9 +9,10 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         background: rgba(0, 0, 0, 0.5);
         z-index: 1000;
+
       }
       
       .popup-content {
@@ -26,6 +27,15 @@
         box-sizing: content-box;
         padding: 50px 60px 0 60px;
         height: 60%;
+        .foot-bk{
+            background-color: var(--white200);
+            position: absolute;
+            bottom: 0;
+            left:0px;
+            width: 100%;
+            height: 400px;
+            z-index: -1;
+        }
       }
       
       
@@ -34,6 +44,9 @@
         border: none;
         font-size: 24px;
         cursor: pointer;
+        position: absolute;
+        top:10px;
+        right: 50px;
       }
       .popup-header {
         
@@ -71,6 +84,9 @@
 
     }
       .popup-body{
+        a{
+            margin: 5px 0;
+        }
         display: flex;
         .popup-bold{
             font-family: 'Noto-Sans-medium';
@@ -97,14 +113,31 @@
       }
       .footer-sections{
         display: flex;
+        margin-top: 20px;
+        width: 100%;
+        justify-content: space-between;
         .footer-section{
+            border-right: 1px solid rgb(189, 189, 189);
+            padding-right: 100px;
+            padding-left: 10px;
             .tomypage{
                 display: flex;
+                justify-content: center;
+                align-items: center;
                 img{
                     width: 9px;
                     height: 9px;
                     margin-left: 15px;
+                    margin-right: 10px;
                 }
+ 
+            }
+            .foot-list{
+                display: flex;
+                flex-direction: column;
+            }
+            &:last-child {
+                border-right:  none; /* 마지막 li의 border-bottom 제거 */
             }
 
         }
@@ -131,10 +164,13 @@
             padding: 0 30px;
             text-align: center;
                 text-align: center;
-            img{
+            .my-img{
                 width: 21px;
                 height: 21px;
             }
+        }
+        .text:hover{
+            color: var(--purple300);
         }
 
     }
@@ -202,6 +238,109 @@
     }
 
 }
-.dropdown-conten{
-    position: absolute;
+.drop-menu{
+    .dropdown-content{
+        background-color: var(--white);
+        height: 340px;
+        position: absolute;
+        top:180px;
+        left:0;
+        z-index:1000;
+        width: 100%;
+        display: flex;
+        .menu-header{
+            padding: 20px 20px 20px 120px;
+            padding-left: 250px;
+            background-color: #eff3f7;
+            position: relative;
+            .drop-img{
+                width: 120px;
+                height: 130px;
+            position: absolute;
+            top:30px;
+            left: 140px;
+            }
+            .drop-hd{
+                .ani-line{
+                    width: 40px;
+                    height: 3px;
+                    background-color: var(--purple100);
+                    animation: ani_line 0.5s forwards;
+                    margin-bottom: 10px;
+                }
+                .drop-h2{
+                    display: flex;
+                    justify-content: baseline;
+                    font-family: 'Noto-Sans-Bold';
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+                .drop-p{
+                    text-align: left;
+                    width: 140px;
+                    height: 54px;
+                    font-size: 14px;
+                }
+            }
+        }
+        .menu-list{
+            list-style: disc;
+            line-height: 1.8s;
+            margin: 0;
+            padding-inline-start: 1.5em;
+            li::marker {
+                content: '•'; /* 불릿 모양 */
+                font-size: 0.8rem; /* 불릿 크기 조절 */
+                color: var(--purple300); /* 불릿 색상 */
+            }
+            li{
+                padding-left: 10px;
+            }
+            .purple-text{
+                display: inline-block;
+                color: var(--purple300);
+                font-family: 'Noto-Sans-medium';
+                width: 200px;
+                font-size: 13px;
+                margin-top: 10px;
+            }
+        }
+        .a-tags{
+            .content{
+                padding-top: 10px;
+                width: 70%;
+                height: 30px;
+                font-size: 12px;
+                a{
+                    
+                    color:var(--black200)
+                }
+                a::after{
+                    content: "";
+                    display:inline-block;
+                    width: 1px;
+                    height: 10px;
+                    margin: 0 5px;
+                    background-color: var(--black200);
+                }   
+                a:last-child::after{
+                    content: none;
+                }
+            }
+            
+        }
+        
+       
+        
+    }
+
+}
+
+@keyframes ani_line{
+    0%{
+        width: 0;
+    }
+    100% {
+        width: 40px;
+    }
 }

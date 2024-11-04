@@ -1,0 +1,279 @@
+.Second-wrap{
+    margin: 0 auto;
+    position: absolute;
+    top:1700px;
+    
+    width: 100%;
+    .pickslider-wrap{
+        margin: 0 auto;
+        width: 80%;
+        max-width: 1280px;
+        height: 300px;
+        min-height: 350px;
+        padding: 2% 40px;
+        position: relative;
+        background-color: #fff;
+        border: 1px solid #eef0f3;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.05);
+        z-index: 2;
+        .hd-pick-wrap{
+            display: flex;
+            justify-content: space-between;
+            .pick-hd{
+                font-size: 26px;
+                font-family: 'Noto-Sans-Bold';
+            }
+            .button-container{
+                display: flex;
+                align-items: center;
+                b{
+                    color:var(--blue);
+                }
+                h1{
+                    font-size: 16px;
+                    font-family: 'Noto-Sans-Bold';
+                    margin: 0 5px;
+                }
+                h2{
+                    font-size: 16px;
+                    font-family: 'Noto-Sans-Bold';
+                    color:#008489;margin: 0 5px;
+                }
+                
+                button{
+                    font-family: 'Noto-Sans-Medium';
+                    font-size: 16px;
+                    margin: 0 5px;
+                }
+            }
+        }
+
+        .slide-wrap{
+            position: relative;
+            width: 100%;
+            margin-top: 50px;
+            .slide-content{
+                width: 25%;
+                height: 100%;
+                overflow: hidden;
+               margin:0 10px ;
+               border-radius: 12px;
+               button{
+                width: 100%;
+                transition: transform 0.5s ease-out;
+                
+               }
+               h1{
+                margin-top: 30px;
+                font-size: 15px;
+               }
+            }
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+        background-color: #fff;
+        opacity: 0.5;
+        padding: 5px 20px;
+        border-radius: 50%;
+        border: 2px solid var(--black200);
+        color: black !important;
+        }
+
+        .swiper-button-prev:after,
+        .swiper-button-next:after {
+        font-size: 1.1rem !important;
+        font-weight: 600 !important;
+        }
+    }
+    .notice-wrap{
+        width: 80%;
+        max-width: 1280px;
+        margin: 0 auto;
+        height: 100%;
+        min-height: 500px;
+        display: flex;
+        justify-content: space-between;
+        .left-wrap{
+            position: relative;
+            width: 50%;
+            height: 500px;
+            h1{
+                display: inline;
+                font-family: 'Noto-Sans-medium';
+                font-size: 26px;
+                position: absolute;
+                top:100px;
+                left: 0px;
+            }
+            .slide-wrap{
+                position: absolute;
+                top:150px;
+                left: 0px;
+                width: 480px;
+                .slide-content{
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center; 
+                    button{
+                        img{
+                            width: 480px;
+                            height: auto;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+        .right-wrap{
+            position: relative;
+            margin-left: 30px;
+            width: 50%;
+            .select-com {
+                position: absolute;
+                top:100px;
+                left: 0px;
+                width: 280px;        /* 버튼 컨테이너의 너비 */
+                height: 42px;
+                border-radius: 25px;
+                display: flex;
+                justify-content: space-between;
+                overflow: hidden;
+                background-color: #eef0f3;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+                button {
+                  p{
+                    font-family: 'YiSunShin Dotum B', Arial, sans-serif;
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 17.17px;
+                    text-align: center;
+                  }
+                  flex: 1;
+                  z-index: 2;
+                  border-radius: 40px;
+                  background: none;
+                  cursor: pointer;
+                  font-size: 14px;
+                  transition: color 0.3s ease;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  &.active {
+                    color: #fff;
+                    background-color: var(--blue);
+                  }
+                }
+            
+                /* 슬라이더 배경 */
+                .slider-bg {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 50%;   /* 버튼 너비의 절반 */
+                  height: 100%;
+                  background-color: var(--purple);
+                  border-radius: 25px;
+                  transition: left 0.3s ease; /* 좌우 이동 애니메이션 */
+                }
+            
+                /* 배경이 왼쪽으로 이동 (참여 중인 커뮤니티) */
+                .move-left {
+                  left: 0;
+                }
+            
+                /* 배경이 오른쪽으로 이동 (모든 커뮤니티) */
+                .move-right {
+                  left: 50%;
+                }
+              }
+              .right-hd{
+                .main-notice-wrp{
+                    height: 72px;
+                    padding: 10px 10px 10px 96px;
+                    margin-bottom: 15px;
+                    border: 1px solid #eef0f3;
+                    display: flex;
+                    position: absolute;
+                    top:150px;
+                    .date{
+                        padding: 0 15px;
+                       display: flex;
+                       flex-direction: column;
+                       align-items: center;
+                        position: absolute;
+                        top:0;
+                        left: 0;
+                        border-right: 1px solid #eef0f3;
+                        h1{
+                            font-size: 32px;
+                            font-family: 'Noto-Sans-Bold';
+                            color: rgb(255, 115, 0);
+                        }
+                    }
+                    .main-notice{
+                        width: 300px;
+
+                        .title{
+                            font-size: 16px;
+                            font-family: 'Noto-Sans-Bold';
+                            display: -webkit-box;
+                            -webkit-line-clamp: 1;
+                            -webkit-box-orient: vertical;  
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        .info{
+                            display: -webkit-box;
+                            -webkit-line-clamp: 1;
+                            -webkit-box-orient: vertical;  
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
+               
+                ul{       
+                    position: absolute;
+                    top:250px;
+                    left: 10px;  
+                       
+                    li::marker {
+                    content: '•'; /* 불릿 모양 */
+                    font-size: 0.8rem; /* 불릿 크기 조절 */
+                    color: var(--black200); /* 불릿 색상 */
+                }
+                li{
+                    width: 400px;
+                    padding-left: 10px;
+                    .title{
+                        width: 300px;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;  
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        margin-bottom: 10px;
+                    }
+                    .info{
+                       display: none;
+                    }
+                    .date{
+                        position: absolute;
+                        right:0;
+                    }
+                    a{
+                        display: flex;
+                    }
+
+                }
+                }
+              }
+            
+        }
+        
+    }
+}

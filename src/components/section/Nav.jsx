@@ -1,15 +1,15 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, ComponentProps} from 'react';
 import SignupIcon from '../../assets/img/common/ico_join.png';
 import SignInIcon from '../../assets/img/common/ico_login.png';
 import mypage from '../../assets/img/common/ico_gnb_mypage.png';
 import SitemapArrow from '../../assets/img/common/sitemap_arrow_r.png';
 import gana from '../../assets/img/common/ico_tap_check.png';
+import lecture from '../../assets/img/menu/menu01.png';
 
 const Nav = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isSortgana, setSortgana] = useState(false);
-  const [isLectureOpen, setIsLectureOpen] = useState(false);
-  const lectureRef = useRef(null);
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
@@ -23,27 +23,15 @@ const Nav = () => {
     setSortgana(false);
   };
 
-  const handleToggleLecture = () => {
-    setIsLectureOpen(!isLectureOpen);
+
+  const handleMouseEnter = () => {
+    setIsDropdownVisible(true);
   };
 
-  const handleClickOutside = (event) => {
-    if (
-      lectureRef.current &&
-      !lectureRef.current.contains(event.target) &&
-      !event.target.closest('.site-map-btn')
-    ) {
-      setIsLectureOpen(false);
-      setIsPopupOpen(false);
-    }
+  const handleMouseLeave = () => {
+    setIsDropdownVisible(false);
   };
 
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
   return (
     <div className='nav-wrap'>
       <a href="#" className='site-map-btn' onClick={togglePopup}>
@@ -52,34 +40,86 @@ const Nav = () => {
         <span></span>
       </a>
       <div className="list">
-        <a href="#" className="text" onClick={handleToggleLecture}>수업</a>
+        <a href="#" className="text" onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}>수업
+        </a>
         <a href="#" className='text'>연구</a>
         <a href="#" className='text'>교육정책</a>
         <a href="#" className='text'>창의적 체험활동</a>
         <a href="#" className='text'>안내</a>
-        <a href="#" className='text'><img src={mypage} alt="" />나의 공간</a>
+        <a href="#" className='text'><img className="my-img" src={mypage} alt="" />나의 공간</a>
       </div>
-       {/* Lecture Dropdown */}
-       {isLectureOpen && (
-        <div className="dropdown-content" ref={lectureRef}>
+      <div className='drop-menu'>
+      {isDropdownVisible &&(
+          <div className="dropdown-content">
           <div className="menu-header">
-            <img src="icon.png" alt="수업 아이콘" />
-            <h2>수업</h2>
-            <p>초등학교와 중학교의 교과 및 범교과 자료를 제공합니다.</p>
+            <img className="drop-img" src={lecture} />
+            <div className='drop-hd'>
+              <div className="ani-line"></div>
+            <h2 className='drop-h2'>수업</h2>
+            <p className='drop-p'>초등학교와 중학교의 교과 및 범교과 자료를 제공합니다.</p>
+            </div>
           </div>
           <ul className="menu-list">
-            <li>수업·연구자료</li>
-            <li>주제별 학습자료</li>
-            <li>디지털교과서</li>
-            <li>e학습터</li>
-            <li>짜잔수학</li>
-            <li>잇다</li>
-            <li>위두랑</li>
-            <li>선생님들의 나눔공간</li>
-            <li>글꼴·이미지·음악·PPT</li>
+            <li><h2 href="#" className="purple-text">수업·연구자료</h2></li>
+            <li><h2 href="#" className="purple-text">주제별 학습자료</h2>
+                
+            </li>
+            <li><h2 href="#" className="purple-text">디지털교과서</h2>
+                
+            </li>
+            <li><h2 href="#" className="purple-text">e학습터</h2></li>
+            <li><h2 href="#" className="purple-text">짜잔수학</h2></li>
+            <li><h2 href="#" className="purple-text">잇다</h2></li>
+            <li><h2 href="#" className="purple-text">위두랑</h2></li>
+            <li><h2 href="#" className="purple-text">선생님들의 나눔공간</h2></li>
+            <li><h2 href="#" className="purple-text">글꼴·이미지·음악·PPT</h2>
+
+            </li>
           </ul>
+          <div className='a-tags'>
+          <div className="content"><a href="#">초등학교</a><a href="#">중학교</a></div>
+          <div className="content"><a href="#">사회</a>
+              <a href="#">과학</a>
+              <a href="#">미술</a>
+              <a href="#">음악</a>
+              <a href="#">체육</a>
+              <a href="#">기술·가정·실과</a>
+              <a href="#">범교과 학습 주제</a>
+          </div>
+          <div className="content">
+              <a href="#">서비스 이용안내</a>
+              <a href="#">알림사항</a>
+              <a href="#">교원연수</a>
+              <a href="#">수업사례 동영상</a>
+              <a href="#">교수·학습 과정안</a>
+              <a href="#">연구·선도학교 보고서</a>
+              <a href="#">수업연구회자료</a>
+              <a href="#">실감형 콘텐츠 활용자료</a>
+              <a href="#">건강하게 활용하기</a>
+              <a href="#">자주하는 질문</a>
+          </div>
+          <div className="content"></div>
+          <div className="content"></div>
+          <div className="content"></div>
+          <div className="content"></div>
+          <div className="content"></div>
+          <div className="content">
+              <a href="#">글꼴</a>
+              <a href="#">이미지(일러스트)</a>
+              <a href="#">이미지(아이콘)</a>
+              <a href="#">음악(배경음악)</a>
+              <a href="#">음악(효과음)</a>
+              <a href="#">PPT템플릿</a>
+          </div>
+
+          </div>
+
+
         </div>
-      )}
+        ) }
+      </div>
+      
       <div className="sign-wrp">
         <button className='signup'><img src={SignupIcon} alt="회원가입 아이콘" /><p>회원가입</p></button>  
         <button className='signin'><img src={SignInIcon} alt="로그인 아이콘" /><p>로그인</p></button>
@@ -87,7 +127,9 @@ const Nav = () => {
 
       {isPopupOpen && (
         <div className="popup-overlay" onClick={togglePopup}>
+         
           <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+          <div className='foot-bk'></div>
             <div className="popup-header">
               <h2>전체메뉴 보기</h2>
               <div className="menu-options">
@@ -160,7 +202,7 @@ const Nav = () => {
             <div className="footer-sections">
               <div className="footer-section">
                 <h3 className='popup-bold'>안내</h3>
-                <div>
+                <div className='foot-list'>
                   <a href="#" className='popup-text'>에듀넷·티-클리어란?</a>
                   <a href="#" className='popup-text'>알림정보</a>
                   <a href="#" className='popup-text'>최신교육동향</a>
@@ -185,7 +227,7 @@ const Nav = () => {
 
               <div className="footer-section">
                 <h3 className='popup-bold'>기타</h3>
-                <div>
+                <div className='foot-list'>
                   <a href="#" className='popup-text'>원격지원</a>
                   <a href="#" className='popup-text'>검색 API</a>
                   <a href="#" className='popup-text'>페이스북 페이지</a>
