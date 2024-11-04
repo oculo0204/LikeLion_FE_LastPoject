@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../section/Header'
 import Nav from '../section/Nav'
 import VisualBanner from './VisualBanner'
+import TableMenu from './TableMenu'
 
 const Main = () => {
   return (
@@ -9,6 +10,7 @@ const Main = () => {
       <Header/>
       <Nav/>
       <VisualBanner/>
+      <TableMenu/>
     </div>
   )
 }

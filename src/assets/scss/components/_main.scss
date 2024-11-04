@@ -212,3 +212,35 @@
     }
     
 }
+
+.TableMenu-wrap{
+    background-color: var(--bkcolor);
+    .online-menu{
+        width: 460px;
+        height: 110px;
+        position: relative;
+    }
+    .balloon{
+        width: 450px;
+        height: 110px;
+        background-color: var(--white);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    }
+    .balloon::after{
+        border-top: 10px solid transparent;
+    border-left: 10px solid var(--white);
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    content: "";
+    position: absolute;
+    top: 40px;
+    right:-10px;
+        z-index: 1;
+}
+    .balloon::before {
+        border-left: 10px solid rgba(0, 0, 0, 0.1); /* 그림자 색상 */
+        right: -12px; /* 그림자 효과를 주기 위해 약간 더 왼쪽으로 위치 */
+        z-index: 0;
+    }
+}
